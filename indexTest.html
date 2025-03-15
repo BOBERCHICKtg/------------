@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="slider__box">
+      <div class="slider" role="region" aria-label="Паттерны">
+        <div class="slides" aria-live="polite">
+          <div
+            class="slide"
+            role="group"
+            aria-labelledby="item-1-label"
+            id="carousel-item-1"
+          >
+            <img src="img/slider-img-1.svg" alt="слайд-1" />
+            <div class="slider__info_box">
+              <p class="slide__info_text">
+                (1) Работа с сервисом приносит радость, потому что высочайший
+                профессионализм, удобство, оперативность, и просто приятные
+                люди!
+              </p>
+              <p class="slide__info_name">Александра Селезнева</p>
+              <p class="slide__info_job">фотограф</p>
+            </div>
+          </div>
+          <div
+            class="slide"
+            role="group"
+            aria-labelledby="item-2-label"
+            id="carousel-item-2"
+          >
+            <img src="img/slider-img-1.svg" alt="слайд-2" />
+            <div class="slider__info_box">
+              <p class="slide__info_text">
+                (2) Работа с сервисом приносит радость, потому что высочайший
+                профессионализм, удобство, оперативность, и просто приятные
+                люди!
+              </p>
+              <p class="slide__info_name">Александра Селезнева</p>
+              <p class="slide__info_job">фотограф</p>
+            </div>
+          </div>
+          <div
+            class="slide"
+            role="group"
+            aria-labelledby="item-3-label"
+            id="carousel-item-3"
+          >
+            <img src="img/slider-img-1.svg" alt="слайд-3" />
+            <div class="slider__info_box">
+              <p class="slide__info_text">
+                (3) Работа с сервисом приносит радость, потому что высочайший
+                профессионализм, удобство, оперативность, и просто приятные
+                люди!
+              </p>
+              <p class="slide__info_name">Александра Селезнева</p>
+              <p class="slide__info_job">фотограф</p>
+            </div>
+          </div>
+          <div
+            class="slide"
+            role="group"
+            aria-labelledby="item-4-label"
+            id="carousel-item-4"
+          >
+            <img src="img/slider-img-1.svg" alt="слайд-4" />
+            <div class="slider__info_box">
+              <p class="slide__info_text">
+                (4) Работа с сервисом приносит радость, потому что высочайший
+                профессионализм, удобство, оперативность, и просто приятные
+                люди!
+              </p>
+              <p class="slide__info_name">Александра Селезнева</p>
+              <p class="slide__info_job">фотограф</p>
+            </div>
+          </div>
+          <div
+            class="slide"
+            role="group"
+            aria-labelledby="item-4-label"
+            id="carousel-item-4"
+          >
+            <img src="img/slider-img-1.svg" alt="слайд-4" />
+            <div class="slider__info_box">
+              <p class="slide__info_text">
+                (5) Работа с сервисом приносит радость, потому что высочайший
+                профессионализм, удобство, оперативность, и просто приятные
+                люди!
+              </p>
+              <p class="slide__info_name">Александра Селезнева</p>
+              <p class="slide__info_job">фотограф</p>
+            </div>
+          </div>
+        </div>
+        <div class="controls" role="group" aria-label="Управление слайдами">
+          <button
+            class="button button-radio"
+            type="button"
+            aria-current="true"
+            aria-label="Показать 1 из 5"
+          ></button>
+          <button
+            class="button button-radio"
+            type="button"
+            aria-label="Показать 2 из 5"
+          ></button>
+          <button
+            class="button button-radio"
+            type="button"
+            aria-label="Показать 3 из 5"
+          ></button>
+          <button
+            class="button button-radio"
+            type="button"
+            aria-label="Показать 4 из 5"
+          ></button>
+          <button
+            class="button button-radio"
+            type="button"
+            aria-label="Показать 5 из 5"
+          ></button>
+
+          <button
+            aria-label="Предыдущий"
+            type="button"
+            class="button button-prev"
+          ></button>
+          <button
+            aria-label="Следующий"
+            type="button"
+            class="button button-next"
+          ></button>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.querySelector(".slider");
+        const slides = slider.querySelectorAll(".slide");
+        const activeSlides = "slide--active";
+        const slideCount = slides.length;
+        const controlButtons = slider.querySelectorAll(".button-radio");
+        const prevButton = slider.querySelector(".button-prev");
+        const nextButton = slider.querySelector(".button-next");
+        const activeButton = "active";
+        const inactiveButton = "aria-disabled";
+        const currentButton = "aria-current";
+        let currentSlide = 0;
+
+        function updateSlider() {
+          slides.forEach((slide, index) => {
+            if (index === currentSlide) {
+              slide.classList.add(activeSlides);
+            } else {
+              slide.classList.remove(activeSlides);
+            }
+          });
+
+          controlButtons.forEach((button, index) => {
+            if (index === currentSlide) {
+              button.classList.add(activeButton);
+              button.setAttribute(currentButton, true);
+            } else {
+              button.classList.remove(activeButton);
+              button.removeAttribute(currentButton, true);
+            }
+
+            prevButton.setAttribute(inactiveButton, currentSlide === 0);
+            nextButton.setAttribute(
+              inactiveButton,
+              currentSlide === slideCount - 1
+            );
+          });
+        }
+
+        controlButtons.forEach((button, index) => {
+          button.addEventListener("click", () => {
+            if (index < slideCount) {
+              currentSlide = index;
+              updateSlider();
+            }
+          });
+        });
+
+        prevButton.addEventListener("click", () => {
+          if (currentSlide > 0) {
+            currentSlide--;
+            updateSlider();
+          }
+        });
+
+        nextButton.addEventListener("click", () => {
+          if (currentSlide < slideCount - 1) {
+            currentSlide++;
+            updateSlider();
+          }
+        });
+
+        slider.addEventListener("keydown", function (event) {
+          if (event.key === "ArrowLeft" && currentSlide > 0) {
+            currentSlide--;
+            updateSlider();
+          } else if (
+            event.key === "ArrowRight" &&
+            currentSlide < slideCount - 1
+          ) {
+            currentSlide++;
+            updateSlider();
+          }
+        });
+
+        updateSlider();
+      });
+    </script>
+  </body>
+</html>
