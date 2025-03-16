@@ -2171,84 +2171,401 @@
         </div>
       </div>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const slider = document.querySelector(".slider");
-        const slides = slider.querySelectorAll(".slide");
-        const activeSlides = "slide--active";
-        const slideCount = slides.length;
-        const controlButtons = slider.querySelectorAll(".button-radio");
-        const prevButton = slider.querySelector(".button-prev");
-        const nextButton = slider.querySelector(".button-next");
-        const activeButton = "active";
-        const inactiveButton = "aria-disabled";
-        const currentButton = "aria-current";
-        let currentSlide = 0;
-
-        function updateSlider() {
-          slides.forEach((slide, index) => {
-            if (index === currentSlide) {
-              slide.classList.add(activeSlides);
-            } else {
-              slide.classList.remove(activeSlides);
-            }
-          });
-
-          controlButtons.forEach((button, index) => {
-            if (index === currentSlide) {
-              button.classList.add(activeButton);
-              button.setAttribute(currentButton, true);
-            } else {
-              button.classList.remove(activeButton);
-              button.removeAttribute(currentButton, true);
-            }
-
-            prevButton.setAttribute(inactiveButton, currentSlide === 0);
-            nextButton.setAttribute(
-              inactiveButton,
-              currentSlide === slideCount - 1
-            );
-          });
-        }
-
-        controlButtons.forEach((button, index) => {
-          button.addEventListener("click", () => {
-            if (index < slideCount) {
-              currentSlide = index;
-              updateSlider();
-            }
-          });
-        });
-
-        prevButton.addEventListener("click", () => {
-          if (currentSlide > 0) {
-            currentSlide--;
-            updateSlider();
-          }
-        });
-
-        nextButton.addEventListener("click", () => {
-          if (currentSlide < slideCount - 1) {
-            currentSlide++;
-            updateSlider();
-          }
-        });
-
-        slider.addEventListener("keydown", function (event) {
-          if (event.key === "ArrowLeft" && currentSlide > 0) {
-            currentSlide--;
-            updateSlider();
-          } else if (
-            event.key === "ArrowRight" &&
-            currentSlide < slideCount - 1
-          ) {
-            currentSlide++;
-            updateSlider();
-          }
-        });
-
-        updateSlider();
-      });
-    </script>
+    <div class="questions center">
+      <h2 class="questions__title">Вопросы и ответы</h2>
+      <div class="questions__box">
+        <div class="questions__box-left">
+          <div id="boxMini" class="questions__box-mini">
+            <p class="questions__box-mini--text">
+              На сколько это безопасно, законно и может ли навредить моему
+              сайту?
+            </p>
+            <button class="questions__box-mini--button">
+              <svg
+                width="49.000000"
+                height="49.000000"
+                viewBox="0 0 49 49"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <desc>Created with Pixso.</desc>
+                <defs />
+                <path
+                  id="Vector 1"
+                  d="M22.8 1.51L22.78 1.5C22.78 0.66 23.44 0 24.28 0C25.12 0 25.78 0.66 25.78 1.5L25.76 1.51L22.8 1.51ZM25.76 47.48L25.78 47.5C25.78 48.33 25.12 49 24.28 49C23.44 49 22.78 48.33 22.78 47.5L22.8 47.48L25.76 47.48ZM1.52 25.98L1.5 26C0.66 26 0 25.33 0 24.5C0 23.66 0.66 23 1.5 23L1.52 23.01L1.52 25.98ZM47.48 23.01L47.5 23C48.34 23 49 23.66 49 24.5C49 25.33 48.34 26 47.5 26L47.48 25.98L47.48 23.01Z"
+                  fill="#2D2D2D"
+                  fill-opacity="1.000000"
+                  fill-rule="nonzero"
+                />
+                <path
+                  id="Vector 1"
+                  d="M24.28 1.5L24.28 47.5M1.5 24.5L47.5 24.5"
+                  stroke="#2D2D2D"
+                  stroke-opacity="1.000000"
+                  stroke-width="3.000000"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div id="boxBig" class="questions__box-big hidden">
+            <p class="questions__box-big--text">
+              Происходит обработка обезличенных данных (cookies). Cookies -
+              маленький фрагмент данных, который сохраняется в браузере и
+              передается при обращению к сайтам.Вы можете разместить в политике
+              конфиденциальности условия с согласием на передачу и обработку
+              cookies посетителями вашего сайта. Таким образом, это гарантирует
+              полную легальность работы с данными.Для сайта это не может
+              навредить, и санкций со стороны поисковых системы (Яндекс, Google)
+              нет. 
+            </p>
+          </div>
+          <div id="boxMini" class="questions__box-mini">
+            <p class="questions__box-mini--text">
+              Откуда берутся номера телефонов?
+            </p>
+            <button class="questions__box-mini--button">
+              <svg
+                width="49.000000"
+                height="49.000000"
+                viewBox="0 0 49 49"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <desc>Created with Pixso.</desc>
+                <defs />
+                <path
+                  id="Vector 1"
+                  d="M22.8 1.51L22.78 1.5C22.78 0.66 23.44 0 24.28 0C25.12 0 25.78 0.66 25.78 1.5L25.76 1.51L22.8 1.51ZM25.76 47.48L25.78 47.5C25.78 48.33 25.12 49 24.28 49C23.44 49 22.78 48.33 22.78 47.5L22.8 47.48L25.76 47.48ZM1.52 25.98L1.5 26C0.66 26 0 25.33 0 24.5C0 23.66 0.66 23 1.5 23L1.52 23.01L1.52 25.98ZM47.48 23.01L47.5 23C48.34 23 49 23.66 49 24.5C49 25.33 48.34 26 47.5 26L47.48 25.98L47.48 23.01Z"
+                  fill="#2D2D2D"
+                  fill-opacity="1.000000"
+                  fill-rule="nonzero"
+                />
+                <path
+                  id="Vector 1"
+                  d="M24.28 1.5L24.28 47.5M1.5 24.5L47.5 24.5"
+                  stroke="#2D2D2D"
+                  stroke-opacity="1.000000"
+                  stroke-width="3.000000"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div id="boxMini" class="questions__box-mini">
+            <p class="questions__box-mini--text">
+              Смогу ли я сам установить код на сайт?
+            </p>
+            <button class="questions__box-mini--button">
+              <svg
+                width="49.000000"
+                height="49.000000"
+                viewBox="0 0 49 49"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <desc>Created with Pixso.</desc>
+                <defs />
+                <path
+                  id="Vector 1"
+                  d="M22.8 1.51L22.78 1.5C22.78 0.66 23.44 0 24.28 0C25.12 0 25.78 0.66 25.78 1.5L25.76 1.51L22.8 1.51ZM25.76 47.48L25.78 47.5C25.78 48.33 25.12 49 24.28 49C23.44 49 22.78 48.33 22.78 47.5L22.8 47.48L25.76 47.48ZM1.52 25.98L1.5 26C0.66 26 0 25.33 0 24.5C0 23.66 0.66 23 1.5 23L1.52 23.01L1.52 25.98ZM47.48 23.01L47.5 23C48.34 23 49 23.66 49 24.5C49 25.33 48.34 26 47.5 26L47.48 25.98L47.48 23.01Z"
+                  fill="#2D2D2D"
+                  fill-opacity="1.000000"
+                  fill-rule="nonzero"
+                />
+                <path
+                  id="Vector 1"
+                  d="M24.28 1.5L24.28 47.5M1.5 24.5L47.5 24.5"
+                  stroke="#2D2D2D"
+                  stroke-opacity="1.000000"
+                  stroke-width="3.000000"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div id="boxMini" class="questions__box-mini">
+            <p class="questions__box-mini--text">
+              На какую CMS или конструктор можно установить код «Лид Конвейер»?
+            </p>
+            <button class="questions__box-mini--button">
+              <svg
+                width="49.000000"
+                height="49.000000"
+                viewBox="0 0 49 49"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <desc>Created with Pixso.</desc>
+                <defs />
+                <path
+                  id="Vector 1"
+                  d="M22.8 1.51L22.78 1.5C22.78 0.66 23.44 0 24.28 0C25.12 0 25.78 0.66 25.78 1.5L25.76 1.51L22.8 1.51ZM25.76 47.48L25.78 47.5C25.78 48.33 25.12 49 24.28 49C23.44 49 22.78 48.33 22.78 47.5L22.8 47.48L25.76 47.48ZM1.52 25.98L1.5 26C0.66 26 0 25.33 0 24.5C0 23.66 0.66 23 1.5 23L1.52 23.01L1.52 25.98ZM47.48 23.01L47.5 23C48.34 23 49 23.66 49 24.5C49 25.33 48.34 26 47.5 26L47.48 25.98L47.48 23.01Z"
+                  fill="#2D2D2D"
+                  fill-opacity="1.000000"
+                  fill-rule="nonzero"
+                />
+                <path
+                  id="Vector 1"
+                  d="M24.28 1.5L24.28 47.5M1.5 24.5L47.5 24.5"
+                  stroke="#2D2D2D"
+                  stroke-opacity="1.000000"
+                  stroke-width="3.000000"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div id="boxMini" class="questions__box-mini">
+            <p class="questions__box-mini--text">Как оплатить ваш сервис?</p>
+            <button class="questions__box-mini--button">
+              <svg
+                width="49.000000"
+                height="49.000000"
+                viewBox="0 0 49 49"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <desc>Created with Pixso.</desc>
+                <defs />
+                <path
+                  id="Vector 1"
+                  d="M22.8 1.51L22.78 1.5C22.78 0.66 23.44 0 24.28 0C25.12 0 25.78 0.66 25.78 1.5L25.76 1.51L22.8 1.51ZM25.76 47.48L25.78 47.5C25.78 48.33 25.12 49 24.28 49C23.44 49 22.78 48.33 22.78 47.5L22.8 47.48L25.76 47.48ZM1.52 25.98L1.5 26C0.66 26 0 25.33 0 24.5C0 23.66 0.66 23 1.5 23L1.52 23.01L1.52 25.98ZM47.48 23.01L47.5 23C48.34 23 49 23.66 49 24.5C49 25.33 48.34 26 47.5 26L47.48 25.98L47.48 23.01Z"
+                  fill="#2D2D2D"
+                  fill-opacity="1.000000"
+                  fill-rule="nonzero"
+                />
+                <path
+                  id="Vector 1"
+                  d="M24.28 1.5L24.28 47.5M1.5 24.5L47.5 24.5"
+                  stroke="#2D2D2D"
+                  stroke-opacity="1.000000"
+                  stroke-width="3.000000"
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <img src="img/img-group.svg" alt="" />
+      </div>
+    </div>
+    <div class="marketing center">
+      <div class="marketing__left">
+        <h2 class="marketing__left-title">
+          Лидогенерация — это новая эра маркетинга!
+        </h2>
+        <b
+          ><svg
+            width="72.000000"
+            height="72.000000"
+            viewBox="0 0 72 72"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <desc>Created with Pixso.</desc>
+            <defs>
+              <pattern
+                id="pattern_753_3320"
+                patternContentUnits="objectBoundingBox"
+                width="1.000000"
+                height="1.000000"
+              >
+                <use
+                  xlink:href="#image753_332_0"
+                  transform="matrix(0.013889,0,0,0.013889,0,0)"
+                />
+              </pattern>
+              <image
+                id="image753_332_0"
+                width="72.000000"
+                height="72.000000"
+                xlink:href="data:image/png;base64,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"
+              />
+            </defs>
+            <rect
+              id="Rocket"
+              width="72.000000"
+              height="72.000000"
+              fill="url(#pattern_753_3320)"
+              fill-opacity="1.000000"
+            />
+          </svg>
+        </b>
+        <button class="marketing__left-button">Купить Лиды</button>
+      </div>
+      <div class="marketing__right">
+        <p class="marketing__right-text">
+          Использование лидогенерации снижает стоимость привлечения клиентов,
+          позволяет бизнесу сосредоточиться на основном продукте и значительно
+          упрощает процесс работы.
+        </p>
+        <p class="marketing__right-text">
+          Стоимость заявок на нашей платформе зависит от их качества
+          и сложности. Мы предоставляем прозрачные тарифы и выгодные условия
+          сотрудничества.
+        </p>
+        <p class="marketing__right-text">
+          Наша биржа — это место встречи тех, кто заказывает заявки, и тех,
+          кто их предоставляет. Мы создаём условия для успешного сотрудничества
+          и взаимной выгоды.
+        </p>
+        <div id="hiddenBox" class="hidden__box">
+          <p class="marketing__right-text">
+            Биржа лидов — это современное решение для бизнеса, которое позволяет
+            эффективно находить новых клиентов и масштабировать свою
+            деятельность.
+          </p>
+          <p class="marketing__right-text">
+            Использование биржи помогает оптимизировать стоимость привлечения
+            заявок и получить готовые решения для лидогенерации. Наш сервис
+            предоставляет уникальную возможность купить или продать лиды,
+            обеспечивая прозрачность и надёжность каждой сделки.
+          </p>
+          <p class="marketing__right-text">
+            Мы объединяем вебмастеров, готовых передать заявки, и бизнесы,
+            которым нужны новые клиенты. На нашей платформе вебмастеры размещают
+            готовые заявки, которые затем приобретаются бизнесами
+            для привлечения новых клиентов. Это упрощает процесс взаимодействия
+            и повышает эффективность работы. Каждая заявка проходит тщательную
+            проверку, чтобы обеспечить максимальную ценность для бизнеса.
+          </p>
+          <p class="marketing__right-text">
+            Вы покупаете лиды, уже готовые к взаимодействию, и получаете
+            гарантированный результат.
+          </p>
+        </div>
+        <button id="readMore" class="marketing__right-button">
+          Читать дальше
+        </button>
+      </div>
+    </div>
+    <div class="contacts center">
+      <div class="contacts__box">
+        <div class="contacts__left">
+          <div class="contacts__top">
+            <h2 class="contacts__top-title">Контакты</h2>
+            <p class="contacts__top-text">
+              Есть вопрос, или вы хотите получить бесплатную консультацию?
+              Свяжитесь с нами, и мы предоставим необходимую информацию!
+            </p>
+          </div>
+          <div class="contacts__bottom">
+            <div class="contacts__bottom-box">
+              <p class="contacts__bottom-text">Адрес офиса</p>
+              <p class="contacts__bottom-box--fat">
+                г. Москва, ул. Дубининская, д. 53
+              </p>
+            </div>
+            <div class="contacts__bottom-box">
+              <p class="contacts__bottom-text">Телефон:</p>
+              <p class="contacts__bottom-box--fat">+7 495 118-32-82</p>
+            </div>
+            <div class="contacts__bottom-box">
+              <p class="contacts__bottom-text">Электронная почта</p>
+              <p class="contacts__bottom-box--fat">mailbox@leadconveer.ru</p>
+            </div>
+            <div class="contacts__bottom-img--box">
+              <p class="contacts__bottom-write">
+                Или напишите нам в любимом мессенджере:
+              </p>
+              <b
+                ><svg
+                  width="64.000000"
+                  height="64.000000"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <desc>Created with Pixso.</desc>
+                  <defs>
+                    <clipPath id="clip753_306">
+                      <rect
+                        id="telegram_icon_130816 1"
+                        rx="0.000000"
+                        width="63.000000"
+                        height="63.000000"
+                        transform="translate(0.500000 0.500000)"
+                        fill="white"
+                        fill-opacity="0"
+                      />
+                    </clipPath>
+                  </defs>
+                  <rect
+                    id="telegram_icon_130816 1"
+                    rx="0.000000"
+                    width="63.000000"
+                    height="63.000000"
+                    transform="translate(0.500000 0.500000)"
+                    fill="#FFFFFF"
+                    fill-opacity="0"
+                  />
+                  <g clip-path="url(#clip753_306)">
+                    <path
+                      id="Vector"
+                      d="M9.6 0L54.4 0C59.7 0 64 4.29 64 9.59L64 54.4C64 59.7 59.7 64 54.4 64L9.6 64C4.29 64 0 59.7 0 54.4L0 9.59C0 4.29 4.29 0 9.6 0Z"
+                      fill="#37AEE2"
+                      fill-opacity="1.000000"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      id="Vector"
+                      d="M24.87 50.5C23.5 50.5 23.62 50 23.25 48.75L19.25 35.62L49.87 17.62L24.87 50.5Z"
+                      fill="#C8DAEA"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                    <path
+                      id="Vector"
+                      d="M24.87 50.5C25.75 50.5 26.25 50 26.87 49.5L32.5 44.12L25.5 39.87L24.87 50.5Z"
+                      fill="#A9C9DD"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                    <path
+                      id="Vector"
+                      d="M25.5 39.87L42.37 52.25C44.12 53.37 45.62 52.75 46.12 50.5L53 18.25C53.62 15.5 51.87 14.25 50 15.12L9.87 30.62C7.25 31.62 7.25 33.25 9.37 33.87L19.75 37.12L43.5 22C44.62 21.37 45.62 21.62 44.87 22.5L25.5 39.87Z"
+                      fill="#F6FBFE"
+                      fill-opacity="1.000000"
+                      fill-rule="nonzero"
+                    />
+                  </g>
+                </svg>
+              </b>
+            </div>
+          </div>
+        </div>
+        <img class="contacts__img" src="img/contacts-img.jpeg" alt="" />
+      </div>
+    </div>
+    <footer class="footer">
+      <p class="footer__text">
+        © 2025 Все права защищены. Технология «Лид Конвейер» - лидогенерация
+        для бизнеса.
+      </p>
+      <p class="footer__text">
+        ООО «ДС-ГРУПП» ИНН 7801355174 ОГРН 1187847129425
+      </p>
+      <div class="footer__box">
+        <p class="footer__box-info">Блог |</p>
+        <p class="footer__box-info">Договор-оферта |</p>
+        <p class="footer__box-info">Политика конфиденциальности |</p>
+        <p class="footer__box-info">Соглашение об обработке данных |</p>
+        <p class="footer__box-info">Вход в личный кабинет</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
