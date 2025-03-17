@@ -651,6 +651,11 @@ body {
     flex-direction: row;
     gap: 60px;
     margin-top: 120px;
+    background-image: url(img/star-technology-1.svg), url(img/star-technology-2.svg);
+    background-repeat: no-repeat no-repeat;
+    background-position-x: 220px, 900px;
+    background-position-y: 10px, 500px;
+    padding-bottom: 70px;
 }
 
 .technology__box-mini {
@@ -689,7 +694,7 @@ body {
 }
 
 .registration {
-    margin-top: 120px;
+    margin-top: 50px;
 }
 
 .registration__box {
@@ -1055,6 +1060,12 @@ input[type=radio]:checked+label::before {
     padding-bottom: 20px;
 }
 
+.why__box-mini {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .why__box-top {
     display: flex;
     flex-direction: row;
@@ -1316,7 +1327,12 @@ input[type=radio]:checked+label::before {
 }
 
 .marketing__right {
-    inline-size: 80%;
+    inline-size: 90%;
+    background-image: url(img/Star\ 5\ \(2\).svg);
+    background-repeat: no-repeat;
+    background-position-x: 710px;
+    background-position-y: 20px;
+    padding-right: 90px;
 }
 
 .marketing__right-text {

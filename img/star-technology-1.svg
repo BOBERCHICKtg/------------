@@ -1,0 +1,16 @@
+<svg width="71.309753" height="71.309570" viewBox="0 0 71.3098 71.3096" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<linearGradient x1="-4.973022" y1="40.972656" x2="67.026978" y2="40.972656" id="paint_linear_753_411_0" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FF6600"/>
+			<stop offset="0.274000" stop-color="#F26659"/>
+			<stop offset="0.374000" stop-color="#F06177"/>
+			<stop offset="0.484000" stop-color="#E65D97"/>
+			<stop offset="0.714000" stop-color="#CA46D2"/>
+			<stop offset="1.000000" stop-color="#8D13F9"/>
+		</linearGradient>
+	</defs>
+	<path id="Star 1" d="M30.68 0L27.61 29.58L0 40.62L29.58 43.69L40.62 71.3L43.69 41.72L71.3 30.68L41.72 27.61L30.68 0Z" fill="url(#paint_linear_753_411_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+</svg>
