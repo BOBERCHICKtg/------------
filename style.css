@@ -58,6 +58,13 @@ body {
     text-align: left;
 }
 
+.Leadgeneration__img {
+    background-image: url(img/Star\ 2\ \(2\).svg), url(img/Star\ 1\ \(1\).svg);
+    background-repeat: no-repeat no-repeat;
+    background-position-x: 730px, -5px;
+    background-position-y: 90px, 350px;
+}
+
 .Leadgeneration {
     /* light grey */
     background: rgb(246, 246, 246);
@@ -117,18 +124,17 @@ body {
 .Leadgeneration__box-button {
     /* button */
     color: rgb(255, 255, 255);
-    font-family: Kollektif;
+    font-family: Inter;
     font-size: 24px;
     font-weight: 700;
     line-height: -1px;
     letter-spacing: 0%;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     border-radius: 20px;
     /* orange juice */
     background: rgb(255, 102, 0);
-    align-items: center;
-    padding: 20px 60px 20px 190px;
+    padding: 20px 60px 20px 60px;
     border: none;
 }
 
@@ -235,6 +241,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 120px;
 }
 
 .price__content {
@@ -251,6 +258,9 @@ body {
     line-height: 52px;
     letter-spacing: 0%;
     text-align: center;
+    margin: 0;
+    inline-size: 40%;
+    padding-bottom: 20px;
 }
 
 .price__text {
@@ -262,6 +272,9 @@ body {
     line-height: 39px;
     letter-spacing: 0%;
     text-align: center;
+    margin: 0;
+    padding-bottom: 60px;
+    inline-size: 45%;
 }
 
 .price__box {
@@ -346,7 +359,7 @@ body {
 .price__box-button {
     /* button */
     color: rgb(255, 255, 255);
-    font-family: Kollektif;
+    font-family: Inter;
     font-size: 24px;
     font-weight: 700;
     line-height: -1px;
@@ -461,11 +474,11 @@ body {
     font-weight: 500;
     line-height: 29px;
     letter-spacing: 0%;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     border-radius: 20px;
     background: rgb(255, 102, 0);
-    padding: 20px 200px 20px 300px;
+    padding: 20px 200px 20px 200px;
 }
 
 .additionally__box {
@@ -473,6 +486,13 @@ body {
     gap: 20px;
     padding-left: calc(30% - 400px);
     padding-right: calc(30% - 400px);
+}
+
+.customers {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .customers__title {
@@ -483,6 +503,9 @@ body {
     line-height: 52px;
     letter-spacing: 0%;
     text-align: center;
+    inline-size: 50%;
+    margin: 0;
+    padding-bottom: 20px;
 }
 
 .customers__text {
@@ -494,6 +517,9 @@ body {
     line-height: 39px;
     letter-spacing: 0%;
     text-align: center;
+    inline-size: 40%;
+    margin: 0;
+    padding-bottom: 40px;
 }
 
 .customers__box {
@@ -566,6 +592,12 @@ body {
     gap: 20px;
 }
 
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .reviews__title {
     /* H2 */
     color: rgb(45, 45, 45);
@@ -591,8 +623,7 @@ body {
     text-align: center;
     margin: 0;
     padding-bottom: 38px;
-    padding-left: 500px;
-    padding-right: 500px;
+    inline-size: 35%;
 }
 
 .revievs__estimation-video-reviev {
@@ -620,6 +651,13 @@ body {
     flex-direction: row;
     gap: 60px;
     margin-top: 120px;
+}
+
+.technology__box-mini {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 160px;
 }
 
 .technology__box-title {
@@ -650,11 +688,22 @@ body {
     max-width: 700px;
 }
 
+.registration {
+    margin-top: 120px;
+}
+
 .registration__box {
     border-radius: 40px;
     background: rgb(45, 45, 45);
     display: flex;
     flex-direction: row;
+}
+
+.registration__box-img {
+    background-image: url(img/star-registrarion.svg);
+    background-repeat: no-repeat;
+    background-position-x: 30px;
+    background-position-y: 400px;
 }
 
 .registration__box-left {
@@ -677,16 +726,17 @@ body {
 .registration__box-button {
     /* button */
     color: rgb(255, 255, 255);
-    font-family: Kollektif;
+    font-family: Montserrat;
     font-size: 24px;
     font-weight: 700;
     line-height: -1px;
     letter-spacing: 0%;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     border-radius: 20px;
     background: rgb(255, 102, 0);
-    padding: 20px 60px 20px 115px;
+    padding: 20px 60px 20px 60px;
+    border: none;
 }
 
 .registration__box-img {
@@ -953,6 +1003,12 @@ input[type=radio]:checked+label::before {
     align-items: center;
 }
 
+.presentation__box {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
 .presentation__box-title {
     /* H2 */
     font-family: Montserrat;
@@ -961,6 +1017,7 @@ input[type=radio]:checked+label::before {
     line-height: 52px;
     letter-spacing: 0%;
     text-align: center;
+    margin: 0;
 }
 
 .why {
@@ -968,6 +1025,7 @@ input[type=radio]:checked+label::before {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    margin-top: 120px;
 }
 
 .why__title {
@@ -978,6 +1036,9 @@ input[type=radio]:checked+label::before {
     line-height: 52px;
     letter-spacing: 0%;
     text-align: center;
+    inline-size: 35%;
+    margin: 0;
+    padding-bottom: 20px;
 }
 
 .why__text {
@@ -989,6 +1050,9 @@ input[type=radio]:checked+label::before {
     line-height: 39px;
     letter-spacing: 0%;
     text-align: center;
+    inline-size: 39%;
+    margin: 0;
+    padding-bottom: 20px;
 }
 
 .why__box-top {
@@ -1071,6 +1135,13 @@ input[type=radio]:checked+label::before {
     gap: 43px;
 }
 
+.result__img {
+    background-image: url(img/Star\ 4\ \(2\).svg), url(img/Star\ 3\ \(2\).svg);
+    background-repeat: no-repeat no-repeat;
+    background-position-x: 10px, 550px;
+    background-position-y: 10px, 300px;
+}
+
 .result__box {
     display: flex;
     flex-direction: column;
@@ -1108,6 +1179,7 @@ input[type=radio]:checked+label::before {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 120px;
 }
 
 .questions__box {
@@ -1126,6 +1198,8 @@ input[type=radio]:checked+label::before {
     line-height: 52px;
     letter-spacing: 0%;
     text-align: left;
+    margin: 0;
+    padding-bottom: 40px;
 }
 
 .questions__box-left {
@@ -1198,7 +1272,7 @@ input[type=radio]:checked+label::before {
 .marketing {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     padding-left: calc(35% - 400px);
     padding-right: calc(35% - 400px);
     gap: 60px;
@@ -1219,6 +1293,11 @@ input[type=radio]:checked+label::before {
     line-height: 52px;
     letter-spacing: 0%;
     text-align: left;
+    margin-right: 50px;
+}
+
+.color__text {
+    color: rgb(255, 102, 0);
 }
 
 .marketing__left-button {
@@ -1234,6 +1313,10 @@ input[type=radio]:checked+label::before {
     border-radius: 20px;
     background: rgb(255, 102, 0);
     padding: 20px 60px 20px 60px;
+}
+
+.marketing__right {
+    inline-size: 80%;
 }
 
 .marketing__right-text {
@@ -1382,6 +1465,7 @@ input[type=radio]:checked+label::before {
     border-radius: 40px 40px 0px 0px;
     padding-top: 80px;
     padding-bottom: 80px;
+    margin-top: 120px;
 }
 
 .footer__text {
